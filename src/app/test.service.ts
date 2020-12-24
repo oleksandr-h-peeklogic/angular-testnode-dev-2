@@ -88,14 +88,12 @@ export class TestService {
       return this.http.post(this.testRunUrl,test).
         toPromise().
         then((respp) =>{
-          console.log('RESPONCE',respp.json());
-          return respp.json()
-          }).catch(this.handleError);
-      }
-        /*}).catch((err) => {
+          console.log('RESPONCE',respp);
+          return respp.json();
+        }).catch((err) => {
           console.error('ERROR',err);
-        })*/
-
+        })
+    }
     // put("/api/contacts/:id")
     // updateContact(putContact: Contact): Promise<Contact> {
     //   var putUrl = this.contactsUrl + '/' + putContact._id;
